@@ -1,6 +1,6 @@
 <html>
 <head>
      <title></title>
-     <?php include 'include/menu.php';?>
+     <?php include 'includes/menu.php';?>
 </head>
 </html> 
