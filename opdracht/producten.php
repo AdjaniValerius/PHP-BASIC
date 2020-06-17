@@ -10,7 +10,7 @@
 
   <?php 
   include 'menu.php'; 
-  include 'includes/functions.php'; 
+  require 'includes/functions.php'; 
   ?>
 
 
@@ -19,8 +19,8 @@
 
     <p>Hieronder een lijst met producten die je bij ons kunt bestellen en de prijs per stuk:</p>
         
-<?php $itemsProducten = array ("Appels", "peren", "ananas", "banaan", "sinasappel", "perzik", "kersen", "aardbeien", "mango", "druif");
-      $itemsPrijs = array (0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 1.0, 2.00, 4.00, 5.00);
+<?php 
+
 ?>
 
         <table>
@@ -89,9 +89,9 @@
 
     <p><button type="submit" name="submit">Bereken totaal</button></p><!-- dit laten staan! -->
 
-    <p>voor <?php echo getAmount('aantal'); ?> x het product: <?php echo $itemsProducten[ getProductNr('productnummer') ]; ?> betaal je: <?php echo getAmount() ?><?php totaalPrijs() ?></p>
-    
-    <p>je bent <?php getAge(); ?> je korting is: </p>
+    <p>voor <?php echo getAmount(); ?> x het product: <?php echo $itemsProducten[ getProductNr() ]; ?> betaal je: <?php totaalPrijs() ?></p>
+        
+    <p>je bent <?php getAge(); ?> je korting is:   <?php korting() ?>  </p>
 
     </form><!-- dit laten staan! -->
 

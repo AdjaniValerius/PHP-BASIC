@@ -9,15 +9,27 @@
   </head>
   <body>
 
-  <?php include 'menu.php';  
+  <?php 
+  include 'menu.php';
+  require 'includes/functions.php';  
   ?>
 
-    <form action="index.php" method="get"><!-- dit laten staan! -->
+    <form action="index.php" method="GET"><!-- dit laten staan! -->
           <p>Op deze website kun je checken welk datatype je hebt ingevoerd.</p>
           <P>Vul hieronder een getal, een decimaal, een tekst of de tekst true/false in en klik op check!</p> 
         <input type="text" name="input"><!-- dit laten staan! -->
       <button type="submit" name="submit">Check</button><!-- dit laten staan! -->
-    <p>Het datatype van de waarde: <?php echo getInput('input'); ?> is </p>
+      
+    <p>Het datatype van de waarde: <?php echo getinput(); ?> is 
+    
+    
+    <?php 
+    
+
+    if( isset($_GET['input'])  ){
+      echo gettype($_GET['input']);
+    }
+     ?> </p>
 
     </form><!-- dit laten staan! -->
 
