@@ -30,7 +30,7 @@ function totaalPrijs()
                   //4        *        2  = 8
     if(isset($_GET['aantal']) && isset($_GET['productnummer'])  ){
         $totaalprijs = getAmount() * $itemsPrijs[ getProductNr() ];
-        echo $totaalprijs;
+        //echo $totaalprijs;
         return $totaalprijs;
 
     }
